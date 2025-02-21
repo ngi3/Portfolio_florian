@@ -6,7 +6,11 @@
     text-decoration: none;
     scroll-behavior: smooth;
     list-style: none;
+}
 
+body {
+    background-color: black;
+    color: white;
 }
 
 header{
@@ -18,21 +22,33 @@ header{
     align-items: center;
     justify-content: center;
     gap: 5rem;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color:rgba(27, 26, 26, 0.562);
     backdrop-filter: blur(8px);
     color: white;
     padding: 0.5rem 1.5rem;
-    border-radius: 3rem;
+    border-radius: 1rem;
     z-index: 1000;
+    /* border: 0.5px white solid;  */
 }
+
+.circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    opacity: 0.4;
+    background-color: violet;
+    border-radius: 9999px;
+    /* backdrop-filter: ; */
+}
+
 .logo{
     color: white;
     font-size: 1.3rem;
     font-weight: 600;
     text-wrap: nowrap;
     transition: 0.3s ease-in-out;
-
 }
+
 .logo:hover{
     transform: scale(1.1);
 }
@@ -62,18 +78,18 @@ li a:hover::before{
 }
 .visit-btn{
     padding: 0.8rem 1.5rem;
-    border-radius: 3rem;
+    border-radius: 1rem;
     border: none;
     font-weight: 500;
     font-size: 1rem;
-    color: white;
+    color: black;
     cursor: pointer;
     text-wrap: nowrap;
     transition: 0.3s ease-in-out;
-    background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
+    background: white;
 }
 .visit-btn:hover{
-    background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
+    background: white;
     transform: scale(1.03);
 }
 #menu-icon{
@@ -99,9 +115,9 @@ section{
     gap: 10rem;
 }
 .about img{
-    width: 35vw;
-    height: 30vw;
-    border-radius: 50%;
+    width: 30vw;
+    height: 25vw;
+    border-radius: 3%;
 }
 .info-box{
     display: flex;
@@ -109,6 +125,10 @@ section{
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
+}
+.text{
+    position: relative;
+    left: 23%;
 }
 .info-box h3{
     font-size: 1.8rem;
@@ -118,6 +138,7 @@ section{
 .info-box h1{
     font-size: 4rem;
     font-weight: 600;
+
 }
 .info-box span{
     background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
@@ -126,25 +147,28 @@ section{
     font-size: 2rem;
 }
 .btn-group{
-    display: flex;
-    gap: 1rem;
+    position: relative;
+    right: 11%;
 }
 .btn{
     border-radius: 3rem;
     padding: 0.5rem 1.5rem;
-    border: 2px solid black;
+    border: 2px solid white;
+    color: white;
     cursor: pointer;
     font-weight: 500;
     text-wrap: nowrap;
     transition: 0.2s ease-in-out;
 }
 .btn:hover{
-    background: black;
-    color: white;
+    background: white;
+    color: black;
 }
 .socials{
+    position: relative;
     display: flex;
     gap: 2rem;
+    right: 12%;
 }
 .socials i {
     font-size: 2.5rem;
@@ -178,7 +202,7 @@ section{
     gap: 2rem;
 }
 .grid-card {
-    border: 2px solid black;
+    border: 2px solid white;
     border-radius: 3rem;
     padding: 3rem;
     display: flex;
@@ -186,12 +210,12 @@ section{
     align-items: baseline;
     justify-content: left;
     cursor: pointer;
-    transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;;
 }
 .grid-card:hover{
     transform: scale(1.02);
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
 }
 .grid-card i{
     font-size: 1.5rem;
@@ -227,14 +251,14 @@ section{
     justify-content: center;
     text-align: center;
     gap: 1.5rem;
-    border: 2px solid black;
+    border: 2px solid white;
     border-radius: 3rem;
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
 .project-card:hover{
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     transform: translateY(-10px)scale(1.02);
 }
 .project-card img{
@@ -261,18 +285,28 @@ section{
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 2rem;
+    gap: 1rem;
     margin-top: 5rem;
 }
 .input-box input{
     position: relative;
-    border-radius: 3rem;
-    border: 2px solid black;
-    padding: 2rem 8rem;
-    font-size: 3rem;
+    border-radius: 1rem;
+    border: 2px solid white;
+    padding: 1rem 6rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.input-box textarea{
+    position: relative;
+    border-radius: 1rem;
+    border: 2px solid white;
+    padding: 4rem 8rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
 }
 .input-box input::placeholder{
     font-size: 3rem;
+    text-align: center;
 }
 .input{
     position: relative;
@@ -280,7 +314,7 @@ section{
 .input i{
     position: absolute;
     font-size: 4rem;
-    top: 50%;
+    top: 35%;
     left: 10px;
     transform: translate(50%,-50%);
 }
@@ -302,7 +336,7 @@ footer ul{
     gap: 3rem;
 }
 footer ul li a{
-    color: black;
+    color: white;
     font-weight: 600;
 }
 .copyright{
